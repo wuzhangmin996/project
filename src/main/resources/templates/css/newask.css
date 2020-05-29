@@ -1,0 +1,27 @@
+.content {
+    margin-top: 16px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 8px;
+    height: auto;
+}
+.content h2{
+    text-align: center;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #efefef;
+}
+.input-title{
+    margin-bottom: 16px;
+}
+#mainEdit{
+    margin-top: 16px;
+}
+.plane-btn{
+    padding: 16px 0 ;
+    text-align: right;
+}
+.plane-askForm{
+    margin-top: 20px;
+    height: auto;
+}
