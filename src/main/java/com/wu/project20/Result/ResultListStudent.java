@@ -1,4 +1,7 @@
-package com.wu.project20.bean;
+package com.wu.project20.Result;
+
+import com.wu.project20.bean.Meta;
+import com.wu.project20.bean.Student;
 
 import java.util.List;
 

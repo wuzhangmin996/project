@@ -1,19 +1,20 @@
-package com.wu.project20.bean;
+package com.wu.project20.Result;
+
+import com.wu.project20.bean.Meta;
 
 public class ResultScore {
-    private Score score ;
+    private int  score ;
     private Meta meta ;
-
-    public ResultScore(Score score, Meta meta) {
+    public ResultScore(int score, Meta meta) {
         this.score = score;
         this.meta = meta;
     }
 
-    public Score getScore() {
+    public int getScore() {
         return score;
     }
 
-    public void setScore(Score score) {
+    public void setScore(int score) {
         this.score = score;
     }
 

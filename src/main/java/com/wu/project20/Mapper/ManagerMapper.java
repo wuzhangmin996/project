@@ -5,9 +5,21 @@ import org.apache.ibatis.annotations.*;
 
 @Mapper
 public interface ManagerMapper {
-    @Select("select * from 管理员 where MID=#{id}")//用id查询管理员信息
+    @Select("select * from manager where MID=#{id}")//用id查询管理员信息
     public Manager selectManager(String id);
 
-    @Update("update 管理员 set 密码 = #{password} where MID = #{id}")//修改密码
+    @Update("update manager set password = #{password} where MID = #{id}")//修改密码
     public void updateManager(String id,String password );
+
+    @Select("select count(*) from manager where mid = #{username}")
+    int managerExist(String username);
+
+    @Select(("select password from manager where  mid =#{username}"))
+    String getPassword(String username);
+
+    @Update("update manager set token = #{token} where  mid= #{username}")
+    void CreateToken(String token, String username);
+
+
+    String SelectManagerToken(String id);
 }

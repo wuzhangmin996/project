@@ -1,83 +1,156 @@
 package com.wu.project20.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Teacher {
-    private String 工号;
-    private String 姓名;
-    private String 性别;
-    private String 主讲课程;
-    private Date 进校时间;
-    private String 密码;
-    private String  token;
+    private String tid;
+    private String name ;
+    private String gender ;
+    private String lesson ;
+    private String schooltime ;
+    private String educationalbackgroud;
+    private String graduatedschool;
+    private String nation ;
+    private String worktype;
+    private String jointime;//加入工作时间
+    private String onduty;
+    private String nativeplace ;
+    private String politicbackground;
+    private String academicdepartment;
+    private String title ;
+    private String inorganization;
 
-    public String get工号() {
-        return 工号;
+    public String getTitle() {
+        return title;
     }
 
-    public void set工号(String 工号) {
-        this.工号 = 工号;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String get姓名() {
-        return 姓名;
+    public String getInorganization() {
+        return inorganization;
     }
 
-    public void set姓名(String 姓名) {
-        this.姓名 = 姓名;
+    public void setInorganization(String inorganization) {
+        this.inorganization = inorganization;
     }
 
-    public String get性别() {
-        return 性别;
+    public String getAcademicdepartment() {
+        return academicdepartment;
     }
 
-    public void set性别(String 性别) {
-        this.性别 = 性别;
+    public void setAcademicdepartment(String academicdepartment) {
+        this.academicdepartment = academicdepartment;
     }
 
-    public String get主讲课程() {
-        return 主讲课程;
+    public String getWorktype() {
+        return worktype;
     }
 
-    public void set主讲课程(String 主讲课程) {
-        this.主讲课程 = 主讲课程;
+    public void setWorktype(String worktype) {
+        this.worktype = worktype;
     }
 
-    public Date get进校时间() {
-        return 进校时间;
+    public String getJointime() {
+
+        return jointime;
     }
 
-    public void set进校时间(Date 进校时间) {
-        this.进校时间 = 进校时间;
+    public void setJointime(Date jointime) {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        String time= formatter.format(jointime);
+        this.jointime = time;
     }
 
-    public String get密码() {
-        return 密码;
+    public String getOnduty() {
+        return onduty;
     }
 
-    public void set密码(String 密码) {
-        this.密码 = 密码;
+    public void setOnduty(String onduty) {
+        this.onduty = onduty;
     }
 
-    public String getToken() {
-        return token;
+    public String getNativeplace() {
+        return nativeplace;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public void setNativeplace(String nativeplace) {
+        this.nativeplace = nativeplace;
     }
 
+    public String getPoliticbackground() {
+        return politicbackground;
+    }
 
-    @Override
-    public String toString() {
-        return "Teacher{" +
-                "工号='" + 工号 + '\'' +
-                ", 姓名='" + 姓名 + '\'' +
-                ", 性别='" + 性别 + '\'' +
-                ", 主讲课程='" + 主讲课程 + '\'' +
-                ", 进校时间=" + 进校时间 +
-                ", 密码='" + 密码 + '\'' +
-                ", token=" + token +
-                '}';
+    public void setPoliticbackground(String politicbackground) {
+        this.politicbackground = politicbackground;
+    }
+
+    public String getNation() {
+        return nation;
+    }
+
+    public void setNation(String nation) {
+        this.nation = nation;
+    }
+
+    public String getTid() {
+        return tid;
+    }
+
+    public void setTid(String tid) {
+        this.tid = tid;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getLesson() {
+        return lesson;
+    }
+
+    public void setLesson(String lesson) {
+        this.lesson = lesson;
+    }
+
+    public String getSchooltime() {
+        return schooltime;
+    }
+
+    public void setSchooltime(Date schooltime) {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        String timestart = formatter.format(schooltime);
+        this.schooltime = timestart;
+    }
+
+    public String getEducationalbackgroud() {
+        return educationalbackgroud;
+    }
+
+    public void setEducationalbackgroud(String educationalbackgroud) {
+        this.educationalbackgroud = educationalbackgroud;
+    }
+
+    public String getGraduatedschool() {
+        return graduatedschool;
+    }
+
+    public void setGraduatedschool(String graduatedschool) {
+        this.graduatedschool = graduatedschool;
     }
 }

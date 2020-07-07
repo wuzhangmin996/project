@@ -100,4 +100,6 @@ public class Score {
                 ", score9=" + score9 +
                 '}';
     }
+
+
 }

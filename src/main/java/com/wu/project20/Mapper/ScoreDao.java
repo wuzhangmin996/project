@@ -16,4 +16,9 @@ public interface ScoreDao {
      * */
     @Select("select * from 自动阅卷_DB_操作 where ID=#{id}")
     public Score SelectScoreById(String id);
+
+    @Select(" select count(*) from 自动阅卷_DB_操作 where ID = #{id}")
+    int existScore(String id);
+
+
 }

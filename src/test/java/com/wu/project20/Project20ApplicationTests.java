@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+
 @SpringBootTest
 class Project20ApplicationTests {
 
@@ -26,28 +27,24 @@ class Project20ApplicationTests {
 
     @Test
     void contextLoads() throws Exception {
-        /*System.out.println(scoreDao.SelectScoreById("2007021536"));
+      /*  String choice ="1-1.5 - 2-2.5";
+        String[] choiceArrays = choice.split("-");
+        question question = new question();
+        List<question> questionList = new ArrayList<>();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//格式化输出日期
+        Date afterDate = sdf.parse("2020-06-27 00:00:00.000");
+        for (int i = 0; i < choiceArrays.length; i=i+2) {
+            question = studentMapper.QuestionList(Integer.parseInt(choiceArrays[i].trim()));
+            Date now = new Date();
+            long time = (long) (Double.parseDouble(choiceArrays[i+1].trim())*60*1000);//60秒
+            //得到开始时间
+            afterDate = new Date(afterDate.getTime()+ time);
 
-        System.out.println(managerMapper.selectManager("2017051150"));
+            question.setTraintime(afterDate);
+            System.out.println(question.toString());
+            questionList.add(question);
 
-        studentMapper.updatestudent("123456","2007021536");*/
-       /* String name = "张";
-        System.out.println(studentMapper.select_name_student("%"+name+"%",2,3));
-       */ /*
-       System.out.println(studentMapper.select_page_student(1,10));*/
-       //System.out.println(tokenProccessor.makeToken());
-        System.out.println(studentMapper.SelectID("2007021536"));
-      /* String token =  new TokenTools().createToken("2017051150","123456");
-       System.out.println(token);
-        System.out.println();
-        TokenTools tokenTools = new TokenTools();
-        DecodedJWT jwt = tokenTools.decodeToken(token);
-        System.out.println(jwt.getClaim("id").asString());
-        System.out.println(jwt.getClaim("password").asString());
-        System.out.println(jwt.getClaim("date").asDate());*/
-      /* System.out.println(studentMapper.SelectToken("2007021536").getToken());*/
-
-
+        }*/
     }
 
 }

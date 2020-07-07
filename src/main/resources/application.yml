@@ -1,6 +1,6 @@
 spring:
   datasource:
     username: sa
-    password: 123456
-    url: jdbc:sqlserver://localhost:1433; DatabaseName=学生信息1
+    password: 990223wu@
+    url: jdbc:sqlserver://127.0.0.1:1433; DatabaseName=学生信息1
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver

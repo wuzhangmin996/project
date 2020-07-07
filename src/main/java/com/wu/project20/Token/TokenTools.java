@@ -21,11 +21,12 @@ public class TokenTools {
      * @return  String
      *
      */
-    public String createToken(String id , String password){
+    public String createToken(String id , String password,String role ){
         long nowMillis = System.currentTimeMillis();
         Date now = new Date(nowMillis);
         String token = JWT.create().withClaim("id",id )
                 .withClaim("password",password)
+                .withClaim("role",role)
                 .withClaim("date",now).sign(Algorithm.HMAC256("123456"));
         return token ;
     }

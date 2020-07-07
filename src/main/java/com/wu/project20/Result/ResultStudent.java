@@ -1,9 +1,11 @@
-package com.wu.project20.bean;
+package com.wu.project20.Result;
+
+import com.wu.project20.bean.Meta;
+import com.wu.project20.bean.Student;
 
 public class ResultStudent {
     private Student student;
     private Meta meta;
-
     public ResultStudent(Student student, Meta meta) {
         super();
         this.student = student ;

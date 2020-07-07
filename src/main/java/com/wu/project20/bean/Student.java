@@ -1,31 +1,57 @@
 package com.wu.project20.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Student {
-    private String SID;
+    private String sid;
     private String  name;
-    private String Ssex;
-    private String professionname;
+    private String gender;
+    private String majorname;
     private int grade;
-    private int  classnumber;
-    private Date schooltime;
-    private String password;
+    private int  classindex;
+    private String  schooltime;
     private int system;
-    private String profesdioncatagory;
+    private String majorcatagory;
     private String academicdepartment;
     private String location;
     private String classname;
-    private String professionquality ;
-    private String level;
-    private String token ;
+    private String majorquality ;
+    private String majorlevel;
+    private String nation ;
+    private String nativeplace ;
+    private String politicbackground;
 
-    public String getSID() {
-        return SID;
+    public String getNativeplace() {
+        return nativeplace;
     }
 
-    public void setSID(String SID) {
-        this.SID = SID;
+    public void setNativeplace(String nativeplace) {
+        this.nativeplace = nativeplace;
+    }
+
+    public String getPoliticbackground() {
+        return politicbackground;
+    }
+
+    public void setPoliticbackground(String politicbackground) {
+        this.politicbackground = politicbackground;
+    }
+
+    public String getNation() {
+        return nation;
+    }
+
+    public void setNation(String nation) {
+        this.nation = nation;
+    }
+
+    public String getSid() {
+        return sid;
+    }
+
+    public void setSid(String sid) {
+        this.sid = sid;
     }
 
     public String getName() {
@@ -36,20 +62,20 @@ public class Student {
         this.name = name;
     }
 
-    public String getSsex() {
-        return Ssex;
+    public String getGender() {
+        return gender;
     }
 
-    public void setSsex(String ssex) {
-        Ssex = ssex;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public String getProfessionname() {
-        return professionname;
+    public String getMajorname() {
+        return majorname;
     }
 
-    public void setProfessionname(String professionname) {
-        this.professionname = professionname;
+    public void setMajorname(String majorname) {
+        this.majorname = majorname;
     }
 
     public int getGrade() {
@@ -60,28 +86,22 @@ public class Student {
         this.grade = grade;
     }
 
-    public Date getSchooltime() {
+    public int getClassindex() {
+        return classindex;
+    }
+
+    public void setClassindex(int classindex) {
+        this.classindex = classindex;
+    }
+
+    public String getSchooltime() {
         return schooltime;
     }
 
     public void setSchooltime(Date schooltime) {
-        this.schooltime = schooltime;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public int getClassnumber() {
-        return classnumber;
-    }
-
-    public void setClassnumber(int classnumber) {
-        this.classnumber = classnumber;
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        String timestart = formatter.format(schooltime);
+        this.schooltime = timestart;
     }
 
     public int getSystem() {
@@ -92,12 +112,12 @@ public class Student {
         this.system = system;
     }
 
-    public String getProfesdioncatagory() {
-        return profesdioncatagory;
+    public String getMajorcatagory() {
+        return majorcatagory;
     }
 
-    public void setProfesdioncatagory(String profesdioncatagory) {
-        this.profesdioncatagory = profesdioncatagory;
+    public void setMajorcatagory(String majorcatagory) {
+        this.majorcatagory = majorcatagory;
     }
 
     public String getAcademicdepartment() {
@@ -124,49 +144,21 @@ public class Student {
         this.classname = classname;
     }
 
-    public String getProfessionquality() {
-        return professionquality;
+    public String getMajorquality() {
+        return majorquality;
     }
 
-    public void setProfessionquality(String professionquality) {
-        this.professionquality = professionquality;
+    public void setMajorquality(String majorquality) {
+        this.majorquality = majorquality;
     }
 
-    public String getLevel() {
-        return level;
+    public String getMajorlevel() {
+        return majorlevel;
     }
 
-    public void setLevel(String level) {
-        this.level = level;
+    public void setMajorlevel(String majorlevel) {
+        this.majorlevel = majorlevel;
     }
 
-    public String getToken() {
-        return token;
-    }
 
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "SID='" + SID + '\'' +
-                ", name='" + name + '\'' +
-                ", Ssex='" + Ssex + '\'' +
-                ", professionname='" + professionname + '\'' +
-                ", grade=" + grade +
-                ", classnumber=" + classnumber +
-                ", schooltime=" + schooltime +
-                ", password='" + password + '\'' +
-                ", system=" + system +
-                ", profesdioncatagory='" + profesdioncatagory + '\'' +
-                ", academicdepartment='" + academicdepartment + '\'' +
-                ", location='" + location + '\'' +
-                ", classname='" + classname + '\'' +
-                ", professionquality='" + professionquality + '\'' +
-                ", level='" + level + '\'' +
-                ", token='" + token + '\'' +
-                '}';
-    }
 }
